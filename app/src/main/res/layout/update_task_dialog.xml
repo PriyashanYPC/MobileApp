@@ -3,92 +3,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
     app:cardBackgroundColor="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="12dp">
 
+        <!-- Task Title -->
         <TextView
             android:id="@+id/titleTaskTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Update Task"
-            android:textColor="@color/blue"
+            android:text="@string/update_task"
+            android:textColor="@color/green"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
 
+        <!-- Close Button -->
         <ImageView
             android:id="@+id/closeImg"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:layout_alignParentEnd="true"
-            android:layout_margin="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="6dp"
             android:src="@drawable/ic_close" />
 
+        <!-- Divider Line -->
         <View
             android:id="@+id/viewHLine"
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="2dp"
             android:layout_below="@id/titleTaskTxt"
-            android:background="@color/blue" />
+            android:layout_marginTop="6dp"
+            android:background="@color/green" />
 
+        <!-- Task Update Inputs Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/viewHLine"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="8dp"
-            android:orientation="vertical">
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp">
 
+            <!-- Task Title Input -->
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.App.TextInputLayout"
                 android:id="@+id/edTaskTitleL"
+                style="@style/Widget.App.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter the Task Title">
+                android:hint="@string/task_title">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edTaskTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"
-                    android:background="#E0F6F1"
+                    android:layout_height="wrap_content"
+                    android:background="@color/field_green"
                     android:inputType="text" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Task Description Input -->
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.App.TextInputLayout"
                 android:id="@+id/edTaskDescL"
+                style="@style/Widget.App.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter the Task Description"
+                android:hint="@string/task_description"
                 app:boxBackgroundMode="outline">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edTaskDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#E0F6F1"
-                    android:gravity="top|start"
+                    android:background="@color/field_green"
                     android:inputType="textMultiLine"
                     android:lines="5"
-                    android:maxLines="5" />
-
+                    android:maxLines="5"
+                    android:gravity="top|start" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- Save Updates Button -->
             <Button
                 android:id="@+id/updateTaskBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="?actionBarSize"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="@color/blue"
-                android:text="Save Updates"
-                android:textSize="20sp" />
+                android:layout_marginTop="10dp"
+                android:text="@string/save_updates"
+                android:textSize="18sp"
+                android:backgroundTint="@color/green" />
         </LinearLayout>
     </RelativeLayout>
+
 </com.google.android.material.card.MaterialCardView>

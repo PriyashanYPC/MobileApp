@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.coding.meet.todo_app'
+    namespace 'com.android.tasker'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.coding.meet.todo_app"
+        applicationId "com.android.tasker"
         minSdk 21
         targetSdk 33
         versionCode 1
